@@ -139,8 +139,12 @@ class SignUpViewController: UIViewController {
             "nick":"\(fullname)",
             "pass":"\(username)"]
     
+        if email.isValidEmailAddress(email: email) {
         networkModel.post(method: .post, param: param, url: networkUrl.SignUpURL) { json in
             print(json)
+        }
+        } else {
+            print("Email 타입이 아닙니다.")
         }
           
         

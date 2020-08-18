@@ -43,6 +43,7 @@ class LoginController: UIViewController {
     
     
     private let passwordTextField : UITextField =  {
+
         let tf =  Utilites().textField(withPlaceholder: "Password")
         tf.isSecureTextEntry = true
         
@@ -122,7 +123,7 @@ class LoginController: UIViewController {
     
     
     @objc func handleSignUp() {
-        let controller = SignUpViewController()
+        let controller = AuthenticatePhoneViewController()
         navigationController?.pushViewController(controller, animated: true)
 
     }

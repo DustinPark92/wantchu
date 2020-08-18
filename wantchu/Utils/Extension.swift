@@ -49,59 +49,59 @@ extension UIView {
             heightAnchor.constraint(equalToConstant: height).isActive = true
         }
     }
+    
+    
+    
+    func center(inView view: UIView, yConstant: CGFloat? = 0) {
         
+        translatesAutoresizingMaskIntoConstraints = false
+        centerXAnchor.constraint(equalTo:view.centerXAnchor).isActive = true
+        centerYAnchor.constraint(equalTo:view.centerYAnchor , constant: yConstant!).isActive = true
         
+    }
+    
+    func centerX(inView view: UIView, topAnchor: NSLayoutYAxisAnchor? = nil, paddingTop: CGFloat? = 0) {
+        translatesAutoresizingMaskIntoConstraints = false
+        centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         
-        func center(inView view: UIView, yConstant: CGFloat? = 0) {
+        if let topAnchor = topAnchor {
+            self.topAnchor.constraint(equalTo: topAnchor, constant: paddingTop!).isActive = true
+        }
+    }
+    
+    func centerY(inView view: UIView, leftAnchor: NSLayoutXAxisAnchor? = nil, paddingLeft: CGFloat? = nil,
+                 constant: CGFloat? = 0) {
+        translatesAutoresizingMaskIntoConstraints = false
+        
+        centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: constant!).isActive = true
+        
+        if let leftAnchor = leftAnchor, let padding = paddingLeft {
             
-            translatesAutoresizingMaskIntoConstraints = false
-            centerXAnchor.constraint(equalTo:view.centerXAnchor).isActive = true
-            centerYAnchor.constraint(equalTo:view.centerYAnchor , constant: yConstant!).isActive = true
-            
+            self.leftAnchor.constraint(equalTo: leftAnchor, constant: padding).isActive = true
         }
         
-        func centerX(inView view: UIView, topAnchor: NSLayoutYAxisAnchor? = nil, paddingTop: CGFloat? = 0) {
-            translatesAutoresizingMaskIntoConstraints = false
-            centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-            
-            if let topAnchor = topAnchor {
-                self.topAnchor.constraint(equalTo: topAnchor, constant: paddingTop!).isActive = true
-            }
-        }
-
-        func centerY(inView view: UIView, leftAnchor: NSLayoutXAxisAnchor? = nil, paddingLeft: CGFloat? = nil,
-                     constant: CGFloat? = 0) {
-            translatesAutoresizingMaskIntoConstraints = false
-            
-            centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: constant!).isActive = true
-            
-            if let leftAnchor = leftAnchor, let padding = paddingLeft {
-                
-                self.leftAnchor.constraint(equalTo: leftAnchor, constant: padding).isActive = true
-            }
-            
-            
-            
-        }
-        
-        
-        func setDimensions(width: CGFloat, height: CGFloat) {
-            translatesAutoresizingMaskIntoConstraints = false
-            widthAnchor.constraint(equalToConstant: width).isActive = true
-            heightAnchor.constraint(equalToConstant: height).isActive = true
-        }
-        
-        func addConstraintsToFillView(_ view: UIView) {
-            
-            translatesAutoresizingMaskIntoConstraints = false
-            
-            anchor(top: view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor)
-        }
         
         
     }
     
     
+    func setDimensions(width: CGFloat, height: CGFloat) {
+        translatesAutoresizingMaskIntoConstraints = false
+        widthAnchor.constraint(equalToConstant: width).isActive = true
+        heightAnchor.constraint(equalToConstant: height).isActive = true
+    }
+    
+    func addConstraintsToFillView(_ view: UIView) {
+        
+        translatesAutoresizingMaskIntoConstraints = false
+        
+        anchor(top: view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor)
+    }
+    
+    
+}
+
+
 
 
 
@@ -116,4 +116,33 @@ extension UIColor {
     static let customPurple = UIColor.rgb(red: 128, green: 87, blue: 194)
     
     
+}
+
+
+extension String {
+    func isValidEmailAddress(email: String) -> Bool {
+        
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        
+        return emailTest.evaluate(with: email)
+    
+    }
+    
+    func validatePassword() -> Bool {
+        let passwordRegEx = "^(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{8}$"
+        
+        let predicate = NSPredicate(format: "SELF MATCHES %@", passwordRegEx)
+        
+        return predicate.evaluate(with: self)
+    }
+}
+
+extension UITextField {
+    
+    func oneTimecodeTextField() {
+        
+        
+    }
 }
