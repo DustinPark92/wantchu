@@ -13,11 +13,20 @@ class VerifyPhoneNumberViewController: UIViewController {
         
         
         //MARK: - Properties
+    
+    
+        var ref = Database.database().reference()
+        var number = "전화번호"
+        let networkModel = CallRequest()
+        let networkUrl = NetWorkURL()
+
+    
+    
         private let mainImageView: UIImageView = {
             let iv = UIImageView()
             iv.contentMode = .scaleAspectFit
             iv.clipsToBounds = true
-            iv.image = UIImage(systemName: "plus")!
+            iv.image = UIImage(systemName: "lock")!
             return iv
         }()
         
@@ -40,6 +49,7 @@ class VerifyPhoneNumberViewController: UIViewController {
         tf.backgroundColor = .red
         tf.textContentType = .oneTimeCode
         tf.borderStyle = .roundedRect
+        tf.keyboardType = .numberPad
         tf.setDimensions(width: 40, height: 40)
         return tf
         }()
@@ -49,6 +59,7 @@ class VerifyPhoneNumberViewController: UIViewController {
         tf.backgroundColor = .red
         tf.textContentType = .oneTimeCode
         tf.borderStyle = .roundedRect
+             tf.keyboardType = .numberPad
         tf.setDimensions(width: 40, height: 40)
         return tf
         }()
@@ -58,7 +69,7 @@ class VerifyPhoneNumberViewController: UIViewController {
         tf.backgroundColor = .red
         tf.textContentType = .oneTimeCode
             tf.borderStyle = .roundedRect
-
+             tf.keyboardType = .numberPad
         tf.setDimensions(width: 40, height: 40)
         return tf
         }()
@@ -68,7 +79,7 @@ class VerifyPhoneNumberViewController: UIViewController {
         tf.backgroundColor = .red
         tf.textContentType = .oneTimeCode
             tf.borderStyle = .roundedRect
-
+             tf.keyboardType = .numberPad
         tf.setDimensions(width: 40, height: 40)
         return tf
         }()
@@ -78,7 +89,7 @@ class VerifyPhoneNumberViewController: UIViewController {
             tf.backgroundColor = .red
             tf.textContentType = .oneTimeCode
                 tf.borderStyle = .roundedRect
-
+                 tf.keyboardType = .numberPad
             tf.setDimensions(width: 40, height: 40)
             return tf
             }()
@@ -88,7 +99,7 @@ class VerifyPhoneNumberViewController: UIViewController {
             tf.backgroundColor = .red
             tf.textContentType = .oneTimeCode
                 tf.borderStyle = .roundedRect
-
+                 tf.keyboardType = .numberPad
             tf.setDimensions(width: 40, height: 40)
             return tf
             }()
@@ -161,15 +172,37 @@ class VerifyPhoneNumberViewController: UIViewController {
         
         @objc func handleRequest() {
             
-            let verificationID = UserDefaults.standard.string(forKey: "authVerificationID")!
-            let verificationCode = String()
+            guard let  verificationID = UserDefaults.standard.string(forKey: "authVerificationID") else { return }
+            
+            guard let tf1 = digitTextField.text else { return }
+            guard let tf2 = digitTextField1.text else { return }
+            guard let tf3 = digitTextField2.text else { return }
+            guard let tf4 = digitTextField3.text else { return }
+            guard let tf5 = digitTextField4.text else { return }
+            guard let tf6 = digitTextField5.text else { return }
+            
+            
+            let verificationCode = "\(tf1)\(tf2)\(tf3)\(tf4)\(tf5)\(tf6)"
+            
+            print(verificationCode)
             
             let credential = PhoneAuthProvider.provider().credential(
             withVerificationID: verificationID,
             verificationCode: verificationCode)
             
             
-            
+            Auth.auth().signInAndRetrieveData(with: credential) { (success, err) in
+                if err == nil {
+                    print("Login Success")
+                    let controller = SignUpViewController()
+                    controller.number = self.number
+                    controller.modalPresentationStyle = .fullScreen
+                    self.present(controller, animated: false
+                        , completion: nil)
+                } else {
+                    print(err?.localizedDescription)
+                }
+            }
             
     
             

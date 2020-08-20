@@ -146,3 +146,23 @@ extension UITextField {
         
     }
 }
+
+
+extension UIViewController {
+    
+    func showAlertOK(mainTitle : String , mainMessage : String , alertMessage: String,  completion : @escaping() -> Void) {
+
+        let alert = UIAlertController(title: mainTitle, message: mainMessage, preferredStyle: .alert)
+        
+
+        let ok = UIAlertAction(title: alertMessage, style: .default) { completion in
+            
+        }
+//        let cancel =  UIAlertAction(title: "취소", style: .cancel, handler: nil )
+//
+        alert.addAction(ok)
+        //alert.addAction(cancel)
+        
+        present(alert, animated: true , completion: nil)
+    }
+}

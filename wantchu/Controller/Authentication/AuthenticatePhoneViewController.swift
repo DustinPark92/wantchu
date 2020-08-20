@@ -8,16 +8,24 @@
 
 import UIKit
 import Firebase
+import Alamofire
 
 class AuthenticatePhoneViewController: UIViewController {
     
     
     //MARK: - Properties
+    
+    var ref = Database.database().reference()
+    let networkModel = CallRequest()
+    let networkUrl = NetWorkURL()
+    var returnValue = false
+    
+    
     private let mainImageView: UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFit
         iv.clipsToBounds = true
-        iv.image = UIImage(systemName: "plus")!
+        iv.image = UIImage(systemName: "lock")!
         return iv
     }()
     
@@ -46,11 +54,19 @@ class AuthenticatePhoneViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        configureNav()
         view.backgroundColor = .twitterBlue
     }
     
     
     //MARK: - Helpers
+    
+    func configureNav() {
+        
+        navigationController?.navigationBar.isHidden = false
+        navigationController?.navigationBar.isTranslucent = true
+        
+    }
     
     
     func configureUI() {
@@ -66,14 +82,37 @@ class AuthenticatePhoneViewController: UIViewController {
         requestButton.centerX(inView: view, topAnchor: authTextField.bottomAnchor, paddingTop: 30)
         authTextField.setDimensions(width: view.frame.width - 60, height: 50)
         requestButton.setDimensions(width: view.frame.width - 60, height: 50)
-        
-        
-        
-        
-        
-        
+
         
     }
+    
+    func checkUserNumber(number : String) -> Bool{
+        
+        let param = ["phone" : number]
+        
+        
+        networkModel.get(method: .get,param:param,url: networkUrl.phoneNumberCheckURL) { json in
+            DispatchQueue.main.async {
+                self.returnValue = json["result"].boolValue
+            }
+        }
+        return returnValue
+    }
+    
+//    func checkUser(number : String) {
+//
+//        ref.child("Users").observeSingleEvent(of: .value, with: { (snapshot) in
+//          // Get user value
+//          let value = snapshot.value as? NSDictionary
+//
+//            print(value?.allKeys)
+//          // ...
+//          }) { (error) in
+//            print(error.localizedDescription)
+//        }
+//
+//        print(ref.child("Users").key)
+//    }
     
     //MARK: - objc
     
@@ -81,6 +120,11 @@ class AuthenticatePhoneViewController: UIViewController {
     @objc func handleRequest() {
         
         guard let number = authTextField.text else { return }
+        
+        
+        print(number)
+        if checkUserNumber(number: "01072209810") {
+        
         
         PhoneAuthProvider.provider().verifyPhoneNumber(number, uiDelegate: nil) { (verificationID, error) in
           if let error = error {
@@ -91,11 +135,15 @@ class AuthenticatePhoneViewController: UIViewController {
             Auth.auth().languageCode = "kr"
             UserDefaults.standard.set(verificationID, forKey: "authVerificationID")
             
-            self.present(VerifyPhoneNumberViewController(), animated: true, completion: nil)
+            let controller = VerifyPhoneNumberViewController()
+            controller.modalPresentationStyle = .fullScreen
+            controller.number = number
+            self.present(controller, animated: true, completion: nil)
             
         }
         
         
+    }
     }
     
     

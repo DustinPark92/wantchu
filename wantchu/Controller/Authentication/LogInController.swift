@@ -21,7 +21,7 @@ class LoginController: UIViewController {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFit
         iv.clipsToBounds = true
-        iv.image = UIImage(systemName: "plus")!
+        iv.image = UIImage(systemName: "lock")!
         return iv
     }()
     
@@ -39,19 +39,33 @@ class LoginController: UIViewController {
         
     }()
     
-    private let emailTextField : UITextField = Utilites().textField(withPlaceholder: "Email")
+    private let emailTextField : UITextField = Utilites().textField(withPlaceholder: "전화번호")
     
     
     private let passwordTextField : UITextField =  {
-
-        let tf =  Utilites().textField(withPlaceholder: "Password")
+        let tf =  Utilites().textField(withPlaceholder: "비밀번호")
         tf.isSecureTextEntry = true
-        
         return tf
     }()
     
+    private let forgetPassButton : UIButton = {
+        let bt = UIButton()
+        bt.setTitle("비밀번호 찾기", for: .normal)
+        bt.addTarget(self, action: #selector(handleFindPass), for: .touchUpInside)
+        return bt
+    }()
+    
+    private let rememberInfo : UIButton = {
+        let bt = UIButton()
+        bt.setTitle("아이디/비밀번호 저장", for: .normal)
+        bt.setImage(UIImage(systemName: "square"), for: .normal)
+        bt.isSelected = false
+        bt.addTarget(self, action: #selector(handleRememberInfo), for: .touchUpInside)
+        return bt
+    }()
+    
     private let logInButton : UIButton = {
-        let button = Utilites().buttonUI(setTitle: "Log in")
+        let button = Utilites().buttonUI(setTitle: "로그인")
         button.addTarget(self, action: #selector(handleLogin(_:)), for: .touchUpInside)
         return button
     }()
@@ -76,6 +90,13 @@ class LoginController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = true
+        navigationController?.navigationBar.barTintColor = .twitterBlue
+        
+    }
+    
     //MARK: - Helpers
     
     func configureUI() {
@@ -86,15 +107,26 @@ class LoginController: UIViewController {
         
         
         view.addSubview(logoImageView)
+        view.addSubview(forgetPassButton)
+        view.addSubview(logInButton)
+        view.addSubview(rememberInfo)
         logoImageView.centerX(inView: view, topAnchor: view.safeAreaLayoutGuide.topAnchor)
         logoImageView.setDimensions(width: 150, height: 150)
         
-        let stack = UIStackView(arrangedSubviews: [emailContainerView,passwordContainerView,logInButton])
+        let stack = UIStackView(arrangedSubviews: [emailContainerView,passwordContainerView])
         stack.axis = .vertical
         stack.spacing = 20
         stack.distribution = .fillEqually
         view.addSubview(stack)
         stack.anchor(top:logoImageView.bottomAnchor, left: view.leftAnchor ,right: view.rightAnchor, paddingTop: 30 , paddingLeft: 16, paddingRight: 16)
+        
+        forgetPassButton.anchor(top:stack.bottomAnchor,right: view.rightAnchor , paddingTop: 23,paddingRight: 30)
+        
+        rememberInfo.anchor(top:stack.bottomAnchor,left: view.leftAnchor,paddingTop: 30,paddingLeft: 20)
+        
+        logInButton.anchor(top:stack.bottomAnchor,left: view.leftAnchor,right: view.rightAnchor,paddingTop: 100,paddingLeft: 16,paddingRight: 16)
+        
+        
         
         view.addSubview(dontHaveAccountButton)
         dontHaveAccountButton.anchor(left:view.leftAnchor,bottom:view.safeAreaLayoutGuide.bottomAnchor,right: view.rightAnchor)
@@ -126,6 +158,24 @@ class LoginController: UIViewController {
         let controller = AuthenticatePhoneViewController()
         navigationController?.pushViewController(controller, animated: true)
 
+    }
+    
+    @objc func handleFindPass() {
+        let controller = FogetPasswordViewController()
+        navigationController?.pushViewController(controller, animated: true)
+        
+    }
+    
+    @objc func handleRememberInfo(sender : UIButton) {
+    
+        if sender.isSelected == false {
+            sender.setImage(UIImage(systemName: "checkmark.square"), for: .normal)
+            sender.isSelected = true
+        } else if sender.isSelected == true {
+            sender.setImage(UIImage(systemName: "square"), for: .normal)
+            sender.isSelected = false
+        }
+        
     }
     
  

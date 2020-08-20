@@ -14,6 +14,7 @@ class SignUpViewController: UIViewController {
     
     let networkModel = CallRequest()
     let networkUrl = NetWorkURL()
+    var number = "전화번호"
     
     
     private let imagePicker = UIImagePickerController()
@@ -47,8 +48,8 @@ class SignUpViewController: UIViewController {
         
     }()
     
-    private lazy var fullnameContainerView: UIView = {
-        let view = Utilites().inputContainerView(withImage: UIImage(systemName: "plus")!, textField: fullnameTextField )
+    private lazy var passwordCheckContainerView: UIView = {
+        let view = Utilites().inputContainerView(withImage: UIImage(systemName: "plus")!, textField: passwordCheckTextField )
         
         return view
         
@@ -61,19 +62,19 @@ class SignUpViewController: UIViewController {
         
     }()
     
-    private let emailTextField : UITextField = Utilites().textField(withPlaceholder: "Email")
+    private let emailTextField : UITextField = Utilites().textField(withPlaceholder: "이메일 입력 ex) 이메일@naver.com")
     
     
     private let passwordTextField : UITextField =  {
-        let tf =  Utilites().textField(withPlaceholder: "Password")
+        let tf =  Utilites().textField(withPlaceholder: "비밀번호 입력")
         tf.isSecureTextEntry = true
         
         return tf
     }()
     
-    private let fullnameTextField : UITextField = Utilites().textField(withPlaceholder: "full name")
+    private let passwordCheckTextField : UITextField = Utilites().textField(withPlaceholder: "비밀번호 확인 입력")
     
-    private let usernameTextField : UITextField = Utilites().textField(withPlaceholder: "username")
+    private let usernameTextField : UITextField = Utilites().textField(withPlaceholder: "이름을 입력하세요.")
     
     private let signUpButton : UIButton = {
         let button = Utilites().buttonUI(setTitle: "Sign Up")
@@ -108,7 +109,7 @@ class SignUpViewController: UIViewController {
         plusPhotoButton.centerX(inView: view, topAnchor: view.safeAreaLayoutGuide.topAnchor)
         plusPhotoButton.setDimensions(width: 128, height: 128)
         
-        let stack = UIStackView(arrangedSubviews: [emailContainerView,passwordContainerView,fullnameContainerView,usernameContainerView,signUpButton])
+        let stack = UIStackView(arrangedSubviews: [usernameContainerView,passwordContainerView,passwordCheckContainerView,emailContainerView,signUpButton])
         stack.axis = .vertical
         stack.spacing = 20
         stack.distribution = .fillEqually
@@ -131,13 +132,15 @@ class SignUpViewController: UIViewController {
     @objc func handleSignUp() {
         guard let email = emailTextField.text else { return }
         guard let password = passwordTextField.text else { return }
-        guard let fullname = fullnameTextField.text else { return }
         guard let username = usernameTextField.text?.lowercased() else { return }
+       
+
         
-        let param = ["phone":"\(email)",
-            "email":"\(password)",
-            "nick":"\(fullname)",
-            "pass":"\(username)"]
+        
+        let param = ["phone":"\(number)",
+            "email":"\(email)",
+            "nick":"\(username)",
+            "pass":"\(password)"]
     
         if email.isValidEmailAddress(email: email) {
         networkModel.post(method: .post, param: param, url: networkUrl.SignUpURL) { json in
