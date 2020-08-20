@@ -12,6 +12,19 @@
 		DA037F0424EBA8E700758C51 /* FogetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA037F0324EBA8E700758C51 /* FogetPasswordViewController.swift */; };
 		DA652D0F24ED443300593DB9 /* ForgetPassWordVerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA652D0E24ED443300593DB9 /* ForgetPassWordVerifyViewController.swift */; };
 		DA652D1124ED449400593DB9 /* ChangePassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA652D1024ED449400593DB9 /* ChangePassViewController.swift */; };
+		DA652D1324EE4D5600593DB9 /* StoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA652D1224EE4D5600593DB9 /* StoreModel.swift */; };
+		DA652D1824EE4E1500593DB9 /* SideMenuListControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA652D1724EE4E1500593DB9 /* SideMenuListControllerTableViewController.swift */; };
+		DA652D1D24EE4E6A00593DB9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA652D1C24EE4E6A00593DB9 /* MainViewController.swift */; };
+		DA652D1F24EE4ED800593DB9 /* MainShopCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA652D1E24EE4ED800593DB9 /* MainShopCollectionViewController.swift */; };
+		DA652D2924EE4F6900593DB9 /* MainHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA652D2824EE4F6900593DB9 /* MainHeader.swift */; };
+		DA652D2B24EE4F7C00593DB9 /* MainHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA652D2A24EE4F7C00593DB9 /* MainHeaderCell.swift */; };
+		DA652D2D24EE4F8800593DB9 /* MainCellBottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA652D2C24EE4F8800593DB9 /* MainCellBottom.swift */; };
+		DA652D2F24EE4F9900593DB9 /* MainShopHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA652D2E24EE4F9900593DB9 /* MainShopHeader.swift */; };
+		DA652D3124EE4FA900593DB9 /* MainShopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA652D3024EE4FA900593DB9 /* MainShopCell.swift */; };
+		DA652D3324EE526200593DB9 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA652D3224EE526200593DB9 /* SecondViewController.swift */; };
+		DA652D3524EE526800593DB9 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA652D3424EE526800593DB9 /* ThirdViewController.swift */; };
+		DA652D3724EE526E00593DB9 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA652D3624EE526E00593DB9 /* FourthViewController.swift */; };
+		DA652D3924EE527900593DB9 /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA652D3824EE527900593DB9 /* FifthViewController.swift */; };
 		DA686ACE24EA7A780088A56A /* LogInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA686ACD24EA7A780088A56A /* LogInController.swift */; };
 		DA686AD024EA7A800088A56A /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA686ACF24EA7A800088A56A /* SignUpController.swift */; };
 		DA686AD624EA7B3C0088A56A /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA686AD524EA7B3C0088A56A /* Extension.swift */; };
@@ -38,6 +51,19 @@
 		DA037F0324EBA8E700758C51 /* FogetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FogetPasswordViewController.swift; sourceTree = "<group>"; };
 		DA652D0E24ED443300593DB9 /* ForgetPassWordVerifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPassWordVerifyViewController.swift; sourceTree = "<group>"; };
 		DA652D1024ED449400593DB9 /* ChangePassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePassViewController.swift; sourceTree = "<group>"; };
+		DA652D1224EE4D5600593DB9 /* StoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreModel.swift; sourceTree = "<group>"; };
+		DA652D1724EE4E1500593DB9 /* SideMenuListControllerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuListControllerTableViewController.swift; sourceTree = "<group>"; };
+		DA652D1C24EE4E6A00593DB9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		DA652D1E24EE4ED800593DB9 /* MainShopCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainShopCollectionViewController.swift; sourceTree = "<group>"; };
+		DA652D2824EE4F6900593DB9 /* MainHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeader.swift; sourceTree = "<group>"; };
+		DA652D2A24EE4F7C00593DB9 /* MainHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeaderCell.swift; sourceTree = "<group>"; };
+		DA652D2C24EE4F8800593DB9 /* MainCellBottom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCellBottom.swift; sourceTree = "<group>"; };
+		DA652D2E24EE4F9900593DB9 /* MainShopHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainShopHeader.swift; sourceTree = "<group>"; };
+		DA652D3024EE4FA900593DB9 /* MainShopCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainShopCell.swift; sourceTree = "<group>"; };
+		DA652D3224EE526200593DB9 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		DA652D3424EE526800593DB9 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		DA652D3624EE526E00593DB9 /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
+		DA652D3824EE527900593DB9 /* FifthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
 		DA686ACD24EA7A780088A56A /* LogInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInController.swift; sourceTree = "<group>"; };
 		DA686ACF24EA7A800088A56A /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		DA686AD524EA7B3C0088A56A /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
@@ -80,6 +106,57 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		DA652D1424EE4DB300593DB9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DA652D2824EE4F6900593DB9 /* MainHeader.swift */,
+				DA652D2A24EE4F7C00593DB9 /* MainHeaderCell.swift */,
+				DA652D2C24EE4F8800593DB9 /* MainCellBottom.swift */,
+				DA652D2E24EE4F9900593DB9 /* MainShopHeader.swift */,
+				DA652D3024EE4FA900593DB9 /* MainShopCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DA652D1524EE4DBB00593DB9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DA652D1624EE4DDC00593DB9 /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				DA652D1724EE4E1500593DB9 /* SideMenuListControllerTableViewController.swift */,
+			);
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
+		DA652D1924EE4E3D00593DB9 /* practice */ = {
+			isa = PBXGroup;
+			children = (
+				DA6F0FA824ED05F700F3594E /* MainTableViewController.swift */,
+				DA6F0FAC24ED07F200F3594E /* TopCollectionViewCell.swift */,
+				DA6F0FAE24ED07FC00F3594E /* BottomCollectionViewCell.swift */,
+				DA6F0FAA24ED065400F3594E /* MainTableTableViewCell.swift */,
+			);
+			path = practice;
+			sourceTree = "<group>";
+		};
+		DA652D1A24EE4E5700593DB9 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				DA652D1C24EE4E6A00593DB9 /* MainViewController.swift */,
+				DA652D1E24EE4ED800593DB9 /* MainShopCollectionViewController.swift */,
+				DA652D3224EE526200593DB9 /* SecondViewController.swift */,
+				DA652D3424EE526800593DB9 /* ThirdViewController.swift */,
+				DA652D3624EE526E00593DB9 /* FourthViewController.swift */,
+				DA652D3824EE527900593DB9 /* FifthViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		DA686AC724EA7A210088A56A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,11 +169,9 @@
 		DA686ACC24EA7A670088A56A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DA652D1A24EE4E5700593DB9 /* Main */,
+				DA652D1624EE4DDC00593DB9 /* SideMenu */,
 				DA6F0FA724ECF79400F3594E /* Authentication */,
-				DA6F0FA824ED05F700F3594E /* MainTableViewController.swift */,
-				DA6F0FAC24ED07F200F3594E /* TopCollectionViewCell.swift */,
-				DA6F0FAE24ED07FC00F3594E /* BottomCollectionViewCell.swift */,
-				DA6F0FAA24ED065400F3594E /* MainTableTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -105,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				DA686AD924EA7C6E0088A56A /* NetWorkModel.swift */,
+				DA652D1224EE4D5600593DB9 /* StoreModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -126,6 +202,9 @@
 		DA78808624EA514E006743C4 = {
 			isa = PBXGroup;
 			children = (
+				DA652D1924EE4E3D00593DB9 /* practice */,
+				DA652D1524EE4DBB00593DB9 /* ViewModel */,
+				DA652D1424EE4DB300593DB9 /* View */,
 				DA78809124EA514E006743C4 /* wantchu */,
 				DA78809024EA514E006743C4 /* Products */,
 				2D5C61D75AFF3DAD733D6A0C /* Pods */,
@@ -178,7 +257,7 @@
 				DA78808B24EA514E006743C4 /* Sources */,
 				DA78808C24EA514E006743C4 /* Frameworks */,
 				DA78808D24EA514E006743C4 /* Resources */,
-				5F4B8D4C0FF5D355C187D449 /* [CP] Embed Pods Frameworks */,
+				1E9367F77C3117A83694998F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -237,7 +316,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5F4B8D4C0FF5D355C187D449 /* [CP] Embed Pods Frameworks */ = {
+		1E9367F77C3117A83694998F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -283,19 +362,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA652D3924EE527900593DB9 /* FifthViewController.swift in Sources */,
+				DA652D2924EE4F6900593DB9 /* MainHeader.swift in Sources */,
+				DA652D2B24EE4F7C00593DB9 /* MainHeaderCell.swift in Sources */,
+				DA652D1324EE4D5600593DB9 /* StoreModel.swift in Sources */,
+				DA652D1824EE4E1500593DB9 /* SideMenuListControllerTableViewController.swift in Sources */,
+				DA652D2D24EE4F8800593DB9 /* MainCellBottom.swift in Sources */,
 				DA6F0FAD24ED07F200F3594E /* TopCollectionViewCell.swift in Sources */,
+				DA652D3324EE526200593DB9 /* SecondViewController.swift in Sources */,
 				DA6F0FAF24ED07FC00F3594E /* BottomCollectionViewCell.swift in Sources */,
 				DA8D45C824EB6C3300409CAC /* AuthenticatePhoneViewController.swift in Sources */,
+				DA652D1D24EE4E6A00593DB9 /* MainViewController.swift in Sources */,
 				DA686AD624EA7B3C0088A56A /* Extension.swift in Sources */,
 				DA78809324EA514E006743C4 /* AppDelegate.swift in Sources */,
 				DA652D1124ED449400593DB9 /* ChangePassViewController.swift in Sources */,
 				DA037F0424EBA8E700758C51 /* FogetPasswordViewController.swift in Sources */,
+				DA652D3124EE4FA900593DB9 /* MainShopCell.swift in Sources */,
 				DA686ACE24EA7A780088A56A /* LogInController.swift in Sources */,
 				DA78809524EA514E006743C4 /* SceneDelegate.swift in Sources */,
 				DA037F0224EB899300758C51 /* VerifyPhoneNumberViewController.swift in Sources */,
 				DA6F0FAB24ED065400F3594E /* MainTableTableViewCell.swift in Sources */,
+				DA652D3524EE526800593DB9 /* ThirdViewController.swift in Sources */,
+				DA652D3724EE526E00593DB9 /* FourthViewController.swift in Sources */,
 				DA6F0FA924ED05F700F3594E /* MainTableViewController.swift in Sources */,
+				DA652D1F24EE4ED800593DB9 /* MainShopCollectionViewController.swift in Sources */,
 				DA686ADA24EA7C6E0088A56A /* NetWorkModel.swift in Sources */,
+				DA652D2F24EE4F9900593DB9 /* MainShopHeader.swift in Sources */,
 				DA686AD824EA7B430088A56A /* Utilites.swift in Sources */,
 				DA686AD024EA7A800088A56A /* SignUpController.swift in Sources */,
 				DA652D0F24ED443300593DB9 /* ForgetPassWordVerifyViewController.swift in Sources */,

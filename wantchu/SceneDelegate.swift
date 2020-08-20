@@ -14,12 +14,71 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-          guard let scene = (scene as? UIWindowScene) else { return }
                 
-                window = UIWindow(windowScene: scene)
-                window?.rootViewController = UINavigationController(rootViewController: LoginController())
-                //window?.rootViewController = LoginController()
+                guard let windowScene = (scene as? UIWindowScene) else { return }
+                
+                window = UIWindow(frame: windowScene.coordinateSpace.bounds)
+                window?.windowScene = windowScene
+                window?.rootViewController = creatTabBar()
                 window?.makeKeyAndVisible()
+                
+    }
+    
+    func createMainNC() -> UINavigationController {
+        let layout = UICollectionViewFlowLayout()
+        let MainVC = MainViewController(collectionViewLayout: layout)
+        MainVC.tabBarItem = UITabBarItem(title: "주문현황",
+                                         image: UIImage(systemName: "clock.fill"),
+                                         tag: 0)
+        
+        return UINavigationController(rootViewController: MainVC)
+    }
+    
+    
+    func creatSecondNC() -> UINavigationController {
+        let vc = SecondViewController()
+        vc.tabBarItem = UITabBarItem(title: "",
+                                     image: UIImage(systemName: "bookmark.fill"),
+                                     tag: 1)
+        
+        return UINavigationController(rootViewController: vc)
+    }
+    
+    func createThirdNC() -> UINavigationController {
+        let vc = ThirdViewController()
+        vc.tabBarItem = UITabBarItem(title: "",
+                                     image: UIImage(systemName: "house.fill"),
+                                     tag: 0)
+        
+        return UINavigationController(rootViewController: vc)
+    }
+    
+    func createFourthNC() -> UINavigationController {
+        let vc = FourthViewController()
+        vc.tabBarItem = UITabBarItem(title: "",
+                                         image: UIImage(systemName: "doc.text.fill"),
+                                         tag: 0)
+        
+        return UINavigationController(rootViewController: vc)
+    }
+    
+    func createFifthNC() -> UINavigationController {
+        let vc = FifthViewController()
+        vc.tabBarItem = UITabBarItem(title: "",
+                                         image: UIImage(systemName: "person.fill"),
+                                         tag: 0)
+        
+        return UINavigationController(rootViewController: vc)
+    }
+    
+    
+    func creatTabBar() -> UITabBarController {
+        let tabBar = UITabBarController()
+        UITabBar.appearance().tintColor = .systemGreen
+        tabBar.viewControllers = [createMainNC(), creatSecondNC(),
+                                  createThirdNC(), createFourthNC(),
+                                  createFifthNC()]
+        return tabBar
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

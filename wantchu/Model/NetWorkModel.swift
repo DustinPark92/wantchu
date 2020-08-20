@@ -95,5 +95,9 @@ class NetWorkURL {
     let phoneNumberCheckURL = "http://54.180.56.44:8080/MemberPhoneCheck.do"
     let passwordUpdateURL = "http://54.180.56.44:8080/MemberPassUpdate.do"
     
+    //store 상세
+    let storeListURL = "http://54.180.56.44:8080/TypeFindAll.do"
+    let storeDetailListURL = "http://54.180.56.44:8080/StoreInfoFindByType.do"
+    
     
 }
