@@ -13,7 +13,8 @@ class SideMenuListController: UITableViewController {
     // MARK: - Properties
     
     let cellIdentifier = "cell"
-    var items = ["menu1", "menu2", "third", "fourth", "fifth"]
+    var items = ["쿠폰", "공지사항", "입점요청", "1:1문의"]
+    let layout = UICollectionViewFlowLayout()
     
     let header = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 200))
     
@@ -57,6 +58,8 @@ class SideMenuListController: UITableViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
     }
     
+    
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
@@ -70,6 +73,21 @@ class SideMenuListController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        switch indexPath.row {
+        case 0:
+        let controller = CouponCollectionViewController(collectionViewLayout: layout)
+        navigationController?.pushViewController(controller, animated: true)
+        case 1:
+            print(123)
+        case 2:
+            showMailView()
+        case 3:
+            let controller =             UserRequestCollectionViewController(collectionViewLayout: layout)
+            navigationController?.pushViewController(controller, animated: true)
+
+        default:
+            break
+        }
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

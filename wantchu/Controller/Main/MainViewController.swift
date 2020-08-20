@@ -35,7 +35,7 @@ class MainViewController: UICollectionViewController {
 //        let vc = LoginController()
 //        vc.modalPresentationStyle = .fullScreen
 //        present(vc, animated: true, completion: nil)
-
+        
         configureUI()
         networkModel.post(method: .get, url: networkURL.storeListURL) { (json) in
             var storeModel = StoreListModel()
@@ -49,10 +49,17 @@ class MainViewController: UICollectionViewController {
             
             self.collectionView.reloadData()
         }
+        
         menu = SideMenuNavigationController(rootViewController: SideMenuListController())
         menu?.leftSide = true
         menu?.menuWidth = view.frame.width * 0.8
         menu?.presentationStyle = .menuSlideIn
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tabBarController?.tabBar.isHidden = false
         
     }
     
