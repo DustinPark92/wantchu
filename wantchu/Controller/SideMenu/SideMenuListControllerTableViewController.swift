@@ -82,7 +82,7 @@ class SideMenuListController: UITableViewController {
         case 2:
             showMailView()
         case 3:
-            let controller =             UserRequestCollectionViewController(collectionViewLayout: layout)
+            let controller = UserRequestTableViewController()
             navigationController?.pushViewController(controller, animated: true)
 
         default:

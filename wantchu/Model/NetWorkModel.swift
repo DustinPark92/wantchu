@@ -105,4 +105,8 @@ class NetWorkURL {
     let couponList = "http://54.180.56.44:8080/CouponFindByPhone.do"
     
     
+    //문의 상세
+    let requestList = "http://54.180.56.44:8080/InquiryListFindByEmail.do"
+    
+    
 }
