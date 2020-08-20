@@ -98,6 +98,13 @@ extension UIView {
         anchor(top: view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor)
     }
     
+    func makeAborderWidth(border: CGFloat, color: CGColor) {
+        
+        self.layer.borderColor = color
+        self.layer.borderWidth = border
+        
+    }
+    
     
 }
 

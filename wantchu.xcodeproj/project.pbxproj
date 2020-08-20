@@ -31,9 +31,10 @@
 		DA652D4624EE670900593DB9 /* CouponCollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA652D4524EE670900593DB9 /* CouponCollectionViewHeader.swift */; };
 		DA652D4824EE702B00593DB9 /* CouponModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA652D4724EE702B00593DB9 /* CouponModel.swift */; };
 		DA652D4A24EE74D600593DB9 /* MailExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA652D4924EE74D600593DB9 /* MailExtension.swift */; };
-		DA652D4C24EE772700593DB9 /* UserRequestCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA652D4B24EE772700593DB9 /* UserRequestCollectionViewController.swift */; };
-		DA652D4E24EE774B00593DB9 /* UserRequestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA652D4D24EE774B00593DB9 /* UserRequestCollectionViewCell.swift */; };
-		DA652D5024EE791400593DB9 /* UserRequestFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA652D4F24EE791400593DB9 /* UserRequestFooterView.swift */; };
+		DA652D5224EE853F00593DB9 /* UserRequestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA652D5124EE853F00593DB9 /* UserRequestTableViewController.swift */; };
+		DA652D5424EE856200593DB9 /* UserRequestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA652D5324EE856200593DB9 /* UserRequestTableViewCell.swift */; };
+		DA652D5A24EE8EAE00593DB9 /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA652D5924EE8EAE00593DB9 /* WriteViewController.swift */; };
+		DA652D5C24EE8F5C00593DB9 /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA652D5B24EE8F5C00593DB9 /* RequestModel.swift */; };
 		DA686ACE24EA7A780088A56A /* LogInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA686ACD24EA7A780088A56A /* LogInController.swift */; };
 		DA686AD024EA7A800088A56A /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA686ACF24EA7A800088A56A /* SignUpController.swift */; };
 		DA686AD624EA7B3C0088A56A /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA686AD524EA7B3C0088A56A /* Extension.swift */; };
@@ -78,9 +79,10 @@
 		DA652D4524EE670900593DB9 /* CouponCollectionViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponCollectionViewHeader.swift; sourceTree = "<group>"; };
 		DA652D4724EE702B00593DB9 /* CouponModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponModel.swift; sourceTree = "<group>"; };
 		DA652D4924EE74D600593DB9 /* MailExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailExtension.swift; sourceTree = "<group>"; };
-		DA652D4B24EE772700593DB9 /* UserRequestCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequestCollectionViewController.swift; sourceTree = "<group>"; };
-		DA652D4D24EE774B00593DB9 /* UserRequestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequestCollectionViewCell.swift; sourceTree = "<group>"; };
-		DA652D4F24EE791400593DB9 /* UserRequestFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequestFooterView.swift; sourceTree = "<group>"; };
+		DA652D5124EE853F00593DB9 /* UserRequestTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequestTableViewController.swift; sourceTree = "<group>"; };
+		DA652D5324EE856200593DB9 /* UserRequestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequestTableViewCell.swift; sourceTree = "<group>"; };
+		DA652D5924EE8EAE00593DB9 /* WriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
+		DA652D5B24EE8F5C00593DB9 /* RequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
 		DA686ACD24EA7A780088A56A /* LogInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInController.swift; sourceTree = "<group>"; };
 		DA686ACF24EA7A800088A56A /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		DA686AD524EA7B3C0088A56A /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
@@ -147,7 +149,8 @@
 			children = (
 				DA652D1724EE4E1500593DB9 /* SideMenuListControllerTableViewController.swift */,
 				DA652D4024EE63BB00593DB9 /* CouponCollectionViewController.swift */,
-				DA652D4B24EE772700593DB9 /* UserRequestCollectionViewController.swift */,
+				DA652D5124EE853F00593DB9 /* UserRequestTableViewController.swift */,
+				DA652D5924EE8EAE00593DB9 /* WriteViewController.swift */,
 			);
 			path = SideMenu;
 			sourceTree = "<group>";
@@ -181,8 +184,7 @@
 			children = (
 				DA652D4324EE66CA00593DB9 /* CouponCollectionViewCell.swift */,
 				DA652D4524EE670900593DB9 /* CouponCollectionViewHeader.swift */,
-				DA652D4D24EE774B00593DB9 /* UserRequestCollectionViewCell.swift */,
-				DA652D4F24EE791400593DB9 /* UserRequestFooterView.swift */,
+				DA652D5324EE856200593DB9 /* UserRequestTableViewCell.swift */,
 			);
 			path = SideMenu;
 			sourceTree = "<group>";
@@ -213,6 +215,7 @@
 				DA686AD924EA7C6E0088A56A /* NetWorkModel.swift */,
 				DA652D1224EE4D5600593DB9 /* StoreModel.swift */,
 				DA652D4724EE702B00593DB9 /* CouponModel.swift */,
+				DA652D5B24EE8F5C00593DB9 /* RequestModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -394,7 +397,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA652D5024EE791400593DB9 /* UserRequestFooterView.swift in Sources */,
 				DA652D3924EE527900593DB9 /* FifthViewController.swift in Sources */,
 				DA652D2924EE4F6900593DB9 /* MainHeader.swift in Sources */,
 				DA652D2B24EE4F7C00593DB9 /* MainHeaderCell.swift in Sources */,
@@ -402,31 +404,33 @@
 				DA652D1824EE4E1500593DB9 /* SideMenuListControllerTableViewController.swift in Sources */,
 				DA652D2D24EE4F8800593DB9 /* MainCellBottom.swift in Sources */,
 				DA6F0FAD24ED07F200F3594E /* TopCollectionViewCell.swift in Sources */,
+				DA652D5224EE853F00593DB9 /* UserRequestTableViewController.swift in Sources */,
 				DA652D3324EE526200593DB9 /* SecondViewController.swift in Sources */,
 				DA6F0FAF24ED07FC00F3594E /* BottomCollectionViewCell.swift in Sources */,
 				DA8D45C824EB6C3300409CAC /* AuthenticatePhoneViewController.swift in Sources */,
-				DA652D4C24EE772700593DB9 /* UserRequestCollectionViewController.swift in Sources */,
 				DA652D1D24EE4E6A00593DB9 /* MainViewController.swift in Sources */,
 				DA686AD624EA7B3C0088A56A /* Extension.swift in Sources */,
 				DA652D4124EE63BB00593DB9 /* CouponCollectionViewController.swift in Sources */,
 				DA78809324EA514E006743C4 /* AppDelegate.swift in Sources */,
 				DA652D1124ED449400593DB9 /* ChangePassViewController.swift in Sources */,
 				DA652D4424EE66CA00593DB9 /* CouponCollectionViewCell.swift in Sources */,
+				DA652D5424EE856200593DB9 /* UserRequestTableViewCell.swift in Sources */,
 				DA037F0424EBA8E700758C51 /* FogetPasswordViewController.swift in Sources */,
 				DA652D3124EE4FA900593DB9 /* MainShopCell.swift in Sources */,
 				DA686ACE24EA7A780088A56A /* LogInController.swift in Sources */,
 				DA78809524EA514E006743C4 /* SceneDelegate.swift in Sources */,
 				DA037F0224EB899300758C51 /* VerifyPhoneNumberViewController.swift in Sources */,
+				DA652D5C24EE8F5C00593DB9 /* RequestModel.swift in Sources */,
 				DA6F0FAB24ED065400F3594E /* MainTableTableViewCell.swift in Sources */,
 				DA652D3524EE526800593DB9 /* ThirdViewController.swift in Sources */,
 				DA652D3724EE526E00593DB9 /* FourthViewController.swift in Sources */,
-				DA652D4E24EE774B00593DB9 /* UserRequestCollectionViewCell.swift in Sources */,
 				DA652D4A24EE74D600593DB9 /* MailExtension.swift in Sources */,
 				DA6F0FA924ED05F700F3594E /* MainTableViewController.swift in Sources */,
 				DA652D1F24EE4ED800593DB9 /* MainShopCollectionViewController.swift in Sources */,
 				DA652D4824EE702B00593DB9 /* CouponModel.swift in Sources */,
 				DA686ADA24EA7C6E0088A56A /* NetWorkModel.swift in Sources */,
 				DA652D2F24EE4F9900593DB9 /* MainShopHeader.swift in Sources */,
+				DA652D5A24EE8EAE00593DB9 /* WriteViewController.swift in Sources */,
 				DA686AD824EA7B430088A56A /* Utilites.swift in Sources */,
 				DA686AD024EA7A800088A56A /* SignUpController.swift in Sources */,
 				DA652D4624EE670900593DB9 /* CouponCollectionViewHeader.swift in Sources */,
