@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D773B4E24EEA00600E96309 /* UserRequestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D773B4C24EEA00600E96309 /* UserRequestTableViewController.swift */; };
+		3D773B4F24EEA00600E96309 /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D773B4D24EEA00600E96309 /* WriteViewController.swift */; };
+		3D773B5124EEA01400E96309 /* UserRequestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D773B5024EEA01400E96309 /* UserRequestTableViewCell.swift */; };
 		3D7BC10B24EE823900E4D488 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D7BC10A24EE823900E4D488 /* GoogleService-Info.plist */; };
 		3D7BC10D24EE8A9C00E4D488 /* StoreDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BC10C24EE8A9C00E4D488 /* StoreDetailModel.swift */; };
 		3D7BC10F24EE963B00E4D488 /* StoreDetailCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BC10E24EE963B00E4D488 /* StoreDetailCollectionViewController.swift */; };
@@ -51,6 +54,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D773B4C24EEA00600E96309 /* UserRequestTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRequestTableViewController.swift; sourceTree = "<group>"; };
+		3D773B4D24EEA00600E96309 /* WriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
+		3D773B5024EEA01400E96309 /* UserRequestTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserRequestTableViewCell.swift; path = View/SideMenu/UserRequestTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		3D7BC10A24EE823900E4D488 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		3D7BC10C24EE8A9C00E4D488 /* StoreDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDetailModel.swift; sourceTree = "<group>"; };
 		3D7BC10E24EE963B00E4D488 /* StoreDetailCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDetailCollectionViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +151,8 @@
 			children = (
 				DA652D1724EE4E1500593DB9 /* SideMenuListControllerTableViewController.swift */,
 				DA652D4024EE63BB00593DB9 /* CouponCollectionViewController.swift */,
+				3D773B4C24EEA00600E96309 /* UserRequestTableViewController.swift */,
+				3D773B4D24EEA00600E96309 /* WriteViewController.swift */,
 			);
 			path = SideMenu;
 			sourceTree = "<group>";
@@ -179,6 +187,7 @@
 			children = (
 				DA652D4324EE66CA00593DB9 /* CouponCollectionViewCell.swift */,
 				DA652D4524EE670900593DB9 /* CouponCollectionViewHeader.swift */,
+				3D773B5024EEA01400E96309 /* UserRequestTableViewCell.swift */,
 			);
 			path = SideMenu;
 			sourceTree = "<group>";
@@ -396,6 +405,7 @@
 				DA652D2B24EE4F7C00593DB9 /* MainHeaderCell.swift in Sources */,
 				DA652D1324EE4D5600593DB9 /* StoreModel.swift in Sources */,
 				DA652D1824EE4E1500593DB9 /* SideMenuListControllerTableViewController.swift in Sources */,
+				3D773B4E24EEA00600E96309 /* UserRequestTableViewController.swift in Sources */,
 				DA652D2D24EE4F8800593DB9 /* MainCellBottom.swift in Sources */,
 				DA6F0FAD24ED07F200F3594E /* TopCollectionViewCell.swift in Sources */,
 				DA652D3324EE526200593DB9 /* SecondViewController.swift in Sources */,
@@ -409,7 +419,9 @@
 				DA652D1124ED449400593DB9 /* ChangePassViewController.swift in Sources */,
 				DA652D4424EE66CA00593DB9 /* CouponCollectionViewCell.swift in Sources */,
 				DA037F0424EBA8E700758C51 /* FogetPasswordViewController.swift in Sources */,
+				3D773B5124EEA01400E96309 /* UserRequestTableViewCell.swift in Sources */,
 				DA652D3124EE4FA900593DB9 /* MainShopCell.swift in Sources */,
+				3D773B4F24EEA00600E96309 /* WriteViewController.swift in Sources */,
 				3D7BC10F24EE963B00E4D488 /* StoreDetailCollectionViewController.swift in Sources */,
 				DA686ACE24EA7A780088A56A /* LogInController.swift in Sources */,
 				DA78809524EA514E006743C4 /* SceneDelegate.swift in Sources */,
