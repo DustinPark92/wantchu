@@ -86,6 +86,7 @@ class LoginController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(123)
         configureUI()
         
     }
