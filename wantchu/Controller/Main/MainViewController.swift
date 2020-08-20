@@ -37,6 +37,7 @@ class MainViewController: UICollectionViewController {
 //        present(vc, animated: true, completion: nil)
         
         configureUI()
+        
         networkModel.post(method: .get, url: networkURL.storeListURL) { (json) in
             var storeModel = StoreListModel()
             for item in json["type"].array! {
@@ -147,6 +148,7 @@ extension MainViewController {
         let layout = UICollectionViewFlowLayout()
         let vc = MainShopCollectionViewController(collectionViewLayout: layout)
         vc.type = storeList[indexPath.item].type_code
+        vc.name = storeList[indexPath.item].type_name
         navigationController?.pushViewController(vc, animated: true)
     }
     

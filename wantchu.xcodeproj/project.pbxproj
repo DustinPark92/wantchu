@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D7BC10B24EE823900E4D488 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D7BC10A24EE823900E4D488 /* GoogleService-Info.plist */; };
+		3D7BC10D24EE8A9C00E4D488 /* StoreDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BC10C24EE8A9C00E4D488 /* StoreDetailModel.swift */; };
+		3D7BC10F24EE963B00E4D488 /* StoreDetailCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BC10E24EE963B00E4D488 /* StoreDetailCollectionViewController.swift */; };
 		3EBDAC067B45A375364E78C6 /* Pods_wantchu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D5F3AEC6514A318F651AC3 /* Pods_wantchu.framework */; };
 		DA037F0224EB899300758C51 /* VerifyPhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA037F0124EB899300758C51 /* VerifyPhoneNumberViewController.swift */; };
 		DA037F0424EBA8E700758C51 /* FogetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA037F0324EBA8E700758C51 /* FogetPasswordViewController.swift */; };
@@ -25,7 +28,6 @@
 		DA652D3524EE526800593DB9 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA652D3424EE526800593DB9 /* ThirdViewController.swift */; };
 		DA652D3724EE526E00593DB9 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA652D3624EE526E00593DB9 /* FourthViewController.swift */; };
 		DA652D3924EE527900593DB9 /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA652D3824EE527900593DB9 /* FifthViewController.swift */; };
-		DA652D3F24EE5F2800593DB9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA652D3E24EE5F2800593DB9 /* GoogleService-Info.plist */; };
 		DA652D4124EE63BB00593DB9 /* CouponCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA652D4024EE63BB00593DB9 /* CouponCollectionViewController.swift */; };
 		DA652D4424EE66CA00593DB9 /* CouponCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA652D4324EE66CA00593DB9 /* CouponCollectionViewCell.swift */; };
 		DA652D4624EE670900593DB9 /* CouponCollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA652D4524EE670900593DB9 /* CouponCollectionViewHeader.swift */; };
@@ -52,6 +54,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D7BC10A24EE823900E4D488 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		3D7BC10C24EE8A9C00E4D488 /* StoreDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDetailModel.swift; sourceTree = "<group>"; };
+		3D7BC10E24EE963B00E4D488 /* StoreDetailCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDetailCollectionViewController.swift; sourceTree = "<group>"; };
 		88675440AB75BA8CED8CD3B4 /* Pods-wantchu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wantchu.release.xcconfig"; path = "Target Support Files/Pods-wantchu/Pods-wantchu.release.xcconfig"; sourceTree = "<group>"; };
 		A1D5F3AEC6514A318F651AC3 /* Pods_wantchu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wantchu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC7E2F36F4DD68CABC93BB50 /* Pods-wantchu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wantchu.debug.xcconfig"; path = "Target Support Files/Pods-wantchu/Pods-wantchu.debug.xcconfig"; sourceTree = "<group>"; };
@@ -72,7 +77,6 @@
 		DA652D3424EE526800593DB9 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		DA652D3624EE526E00593DB9 /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 		DA652D3824EE527900593DB9 /* FifthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
-		DA652D3E24EE5F2800593DB9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DA652D4024EE63BB00593DB9 /* CouponCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponCollectionViewController.swift; sourceTree = "<group>"; };
 		DA652D4324EE66CA00593DB9 /* CouponCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponCollectionViewCell.swift; sourceTree = "<group>"; };
 		DA652D4524EE670900593DB9 /* CouponCollectionViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponCollectionViewHeader.swift; sourceTree = "<group>"; };
@@ -168,6 +172,7 @@
 			children = (
 				DA652D1C24EE4E6A00593DB9 /* MainViewController.swift */,
 				DA652D1E24EE4ED800593DB9 /* MainShopCollectionViewController.swift */,
+				3D7BC10E24EE963B00E4D488 /* StoreDetailCollectionViewController.swift */,
 				DA652D3224EE526200593DB9 /* SecondViewController.swift */,
 				DA652D3424EE526800593DB9 /* ThirdViewController.swift */,
 				DA652D3624EE526E00593DB9 /* FourthViewController.swift */,
@@ -213,6 +218,7 @@
 				DA686AD924EA7C6E0088A56A /* NetWorkModel.swift */,
 				DA652D1224EE4D5600593DB9 /* StoreModel.swift */,
 				DA652D4724EE702B00593DB9 /* CouponModel.swift */,
+				3D7BC10C24EE8A9C00E4D488 /* StoreDetailModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -237,7 +243,6 @@
 				DA78809124EA514E006743C4 /* wantchu */,
 				DA652D1924EE4E3D00593DB9 /* practice */,
 				DA652D1524EE4DBB00593DB9 /* ViewModel */,
-				DA652D1424EE4DB300593DB9 /* View */,
 				DA78809024EA514E006743C4 /* Products */,
 				2D5C61D75AFF3DAD733D6A0C /* Pods */,
 				F01E6C39E8126568BCFCC552 /* Frameworks */,
@@ -259,13 +264,14 @@
 				DA686AD124EA7A870088A56A /* Model */,
 				DA686ACC24EA7A670088A56A /* Controller */,
 				DA686AC724EA7A210088A56A /* Utils */,
-				DA78809224EA514E006743C4 /* AppDelegate.swift */,
-				DA78809424EA514E006743C4 /* SceneDelegate.swift */,
+				DA652D1424EE4DB300593DB9 /* View */,
 				DA78809824EA514E006743C4 /* Main.storyboard */,
 				DA78809B24EA514F006743C4 /* Assets.xcassets */,
-				DA652D3E24EE5F2800593DB9 /* GoogleService-Info.plist */,
 				DA78809D24EA514F006743C4 /* LaunchScreen.storyboard */,
 				DA7880A024EA514F006743C4 /* Info.plist */,
+				3D7BC10A24EE823900E4D488 /* GoogleService-Info.plist */,
+				DA78809224EA514E006743C4 /* AppDelegate.swift */,
+				DA78809424EA514E006743C4 /* SceneDelegate.swift */,
 			);
 			path = wantchu;
 			sourceTree = "<group>";
@@ -339,7 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA78809F24EA514F006743C4 /* LaunchScreen.storyboard in Resources */,
-				DA652D3F24EE5F2800593DB9 /* GoogleService-Info.plist in Resources */,
+				3D7BC10B24EE823900E4D488 /* GoogleService-Info.plist in Resources */,
 				DA78809C24EA514F006743C4 /* Assets.xcassets in Resources */,
 				DA78809A24EA514E006743C4 /* Main.storyboard in Resources */,
 			);
@@ -406,6 +412,7 @@
 				DA6F0FAF24ED07FC00F3594E /* BottomCollectionViewCell.swift in Sources */,
 				DA8D45C824EB6C3300409CAC /* AuthenticatePhoneViewController.swift in Sources */,
 				DA652D4C24EE772700593DB9 /* UserRequestCollectionViewController.swift in Sources */,
+				3D7BC10D24EE8A9C00E4D488 /* StoreDetailModel.swift in Sources */,
 				DA652D1D24EE4E6A00593DB9 /* MainViewController.swift in Sources */,
 				DA686AD624EA7B3C0088A56A /* Extension.swift in Sources */,
 				DA652D4124EE63BB00593DB9 /* CouponCollectionViewController.swift in Sources */,
@@ -414,6 +421,7 @@
 				DA652D4424EE66CA00593DB9 /* CouponCollectionViewCell.swift in Sources */,
 				DA037F0424EBA8E700758C51 /* FogetPasswordViewController.swift in Sources */,
 				DA652D3124EE4FA900593DB9 /* MainShopCell.swift in Sources */,
+				3D7BC10F24EE963B00E4D488 /* StoreDetailCollectionViewController.swift in Sources */,
 				DA686ACE24EA7A780088A56A /* LogInController.swift in Sources */,
 				DA78809524EA514E006743C4 /* SceneDelegate.swift in Sources */,
 				DA037F0224EB899300758C51 /* VerifyPhoneNumberViewController.swift in Sources */,

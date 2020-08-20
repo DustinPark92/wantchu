@@ -26,9 +26,9 @@ class MainShopCell: UICollectionViewCell {
         return iv
     }()
     
-    let titleLabel: UILabel = {
+    var titleLabel: UILabel = {
         let text = UILabel()
-        text.text = "title" // 백엔드에서 받아오기
+//        text.text = "title" // 백엔드에서 받아오기
         text.textAlignment = .left
         return text
     }()
@@ -42,7 +42,7 @@ class MainShopCell: UICollectionViewCell {
     
     let locationLabel: UILabel = {
         let text = UILabel()
-        text.text = "하남시 미사강변동로 20 미사파크 3층 301호" // 백엔드에서 받아오기
+//        text.text = "하남시 미사강변동로 20 미사파크 3층 301호" // 백엔드에서 받아오기
         text.textAlignment = .left
         text.numberOfLines = 0
         return text
@@ -64,7 +64,7 @@ class MainShopCell: UICollectionViewCell {
         imageView.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: leftAnchor, paddingRight: -100) // OR 이미지 width, height를 고정해줘야함
         
         addSubview(titleLabel)
-        titleLabel.anchor(top: topAnchor, left: imageView.rightAnchor, paddingTop: 20, paddingLeft: 10)
+        titleLabel.anchor(top: topAnchor, left: imageView.rightAnchor, paddingTop: 10, paddingLeft: 10)
         
         addSubview(statusLabel)
         statusLabel.anchor(top:topAnchor, right: rightAnchor, paddingTop: 20, paddingRight: 20)
@@ -73,7 +73,7 @@ class MainShopCell: UICollectionViewCell {
         distanceLabel.anchor(bottom: bottomAnchor, right: rightAnchor, paddingLeft: 10, paddingBottom: 10,paddingRight: 20)
         
         addSubview(locationLabel)
-        locationLabel.anchor(left:imageView.rightAnchor, bottom: bottomAnchor,right: distanceLabel.leftAnchor, paddingLeft: 10, paddingBottom: 10,paddingRight: 10)
+        locationLabel.anchor(top: titleLabel.bottomAnchor, left:imageView.rightAnchor, bottom: bottomAnchor, right: distanceLabel.leftAnchor, paddingTop: 8, paddingLeft: 10, paddingBottom: 10,paddingRight: 10)
         
 
     }
