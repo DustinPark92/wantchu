@@ -31,7 +31,7 @@ class MainViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("Hello world")
 //        let vc = LoginController()
 //        vc.modalPresentationStyle = .fullScreen
 //        present(vc, animated: true, completion: nil)
