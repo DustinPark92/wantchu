@@ -33,7 +33,7 @@ class MainHeader: UICollectionReusableView {
         
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         
-        
+        print("hello swift")
         
         
         cv.dataSource = self
