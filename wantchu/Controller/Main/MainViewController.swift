@@ -35,7 +35,7 @@ class MainViewController: UICollectionViewController {
 //        let vc = LoginController()
 //        vc.modalPresentationStyle = .fullScreen
 //        present(vc, animated: true, completion: nil)
-        
+        print(123)
         configureUI()
         networkModel.post(method: .get, url: networkURL.storeListURL) { (json) in
             var storeModel = StoreListModel()
